@@ -1,0 +1,29 @@
+/* CSS Document */
+
+/* CSS Document */
+
+/************************************************************
+ * reset css
+ ************************************************************/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, 
+fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0; }
+html { overflow-y:scroll; }
+h1, h2, h3, h4, h5, h6, td, input { font-size:100%; font-weight:normal; }
+ol, ul { list-style:none; }
+fieldset, img { border:0; }
+caption, th { text-align:left; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal; }
+a img, li img { vertical-align:bottom; }
+
+/* html5 */
+article, aside, figure, footer, header, hgroup, nav, section { display:block; margin:0; padding:0; }
+
+/************************************************************
+ * contents
+ ************************************************************/
+
+.slider { width:500px; margin:10px auto; border:2px solid #ccc; box-shadow:2px 2px 4px rgba(0,0,0,0.2); }
+.slider li { padding:10px 5px; }
+.slider li:hover { background:#f5f5f5; }
+.slider li p { color:#fff; text-align:center; background:#df0000; }

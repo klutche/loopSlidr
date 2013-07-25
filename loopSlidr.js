@@ -1,42 +1,46 @@
 /*
-jQuery roopSlidr Plugin
+jQuery loopSlidr Plugin
 version: 1.0
 Author: KLUTCHE
 */
 
 (function($){
 	
-	$.fn.roopSlidr = function(options) {
+	$.fn.loopSlidr = function(options) {
 		
 		//オプション
 		var settings = $.extend( {
-			'speed': 10, //速さ
+			'speed': 15 //速さ
 		}, options);
 		
 		//開始時のフェードインとプリロード
 		var opening = function(obj){
 			var d = new $.Deferred;
 			var ul = obj.find('ul');
-			var li = obj.find('li');
+			var li = ul.find('li');
 			
-			//li幅の合計を取得
-			width = 0;
-			li.each(function(){
-				width = width + parseInt($(this).innerWidth());
-			});
-		
 			//CSS
 			obj.css({
-				overflow: 'hidden'
+				position: "relative",
+				overflow: "hidden"
+			});
+			ul.css({
+				position: "relative",
+				overflow: "hidden"
+			});
+			li.css({
+				display: "block",
+				float: "left"
 			});
 			
+			//li幅の合計を取得
+			i = 0;
+			li.each(function(){
+				i = i + parseInt($(this).innerWidth());
+			});
+		
 			ul.css({
-				position: 'relative',
-				width: width*2 + 'px',
-				overflow: 'hidden',
-				clear: 'both'
-			}).children('li').css({
-				float: 'left'
+				width: i*2,
 			});
 			
 			//フェードイン
