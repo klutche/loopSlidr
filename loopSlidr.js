@@ -43,11 +43,9 @@ Author: KLUTCHE
 				width: i*2
 			});
 			
-			//フェードイン
-			li.hide().each(function(){
-				$(this).fadeIn('slow', function(){
-					$(this).clone().appendTo(ul);
-				});
+			//liをコピー
+			li.each(function(){
+				$(this).clone().appendTo(ul);
 			});
 			
 			d.resolve();
