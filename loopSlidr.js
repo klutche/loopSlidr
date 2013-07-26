@@ -40,7 +40,7 @@ Author: KLUTCHE
 			});
 		
 			ul.css({
-				width: i*2,
+				width: i*2
 			});
 			
 			//フェードイン
